@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'pundit', '~> 1.1'
+gem 'paperclip', '~> 4.3', '>= 4.3.5'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
