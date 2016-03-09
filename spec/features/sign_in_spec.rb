@@ -1,15 +1,7 @@
 require 'rails_helper'
 
 feature 'Sign in', :devise do
-    before do
-        @user = FactoryGirl.build(:user)
-        def sign_in(user)
-            visit new_user_session_path
-            fill_in "user_email", :with => user.email
-            fill_in "user_password", :with => user.password
-            click_on 'Log in'
-        end
-    end
+
     scenario 'user cannot sign in if not registered' do
         @user = FactoryGirl.build(:user,email: nil, password: nil)
         sign_in(@user)

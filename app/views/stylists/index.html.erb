@@ -1,1 +1,9 @@
 <h1>Let the Good that you do bring out the Beauty in you!</h1>
+
+<div class="row">
+  <% @stylists.each do |stylist| %>
+      <p><%= stylist.name %></p>
+      <p><%= stylist.position %></p>
+      <p><%= stylist.bio %></p>
+  <% end %>
+</div>
