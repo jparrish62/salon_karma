@@ -2,6 +2,7 @@
 
 <div class="row">
   <% @stylists.each do |stylist| %>
+      <p><%= image_tag stylist.image.url(:medium) %></p>
       <p><%= stylist.name %></p>
       <p><%= stylist.position %></p>
       <p><%= stylist.bio %></p>

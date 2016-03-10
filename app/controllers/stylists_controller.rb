@@ -1,6 +1,8 @@
 class StylistsController < ApplicationController
+
     def new
         @stylist = current_user.stylists.build
+        authorize @stylist
     end
 
     def create
@@ -26,6 +28,7 @@ class StylistsController < ApplicationController
 
     def update
         @stylist = find(params[:id])
+        authorize @stylist
         if @stylist.update_attributes(secure_params)
             redirect_to stylist_path, :success => "Stylist updated"
         else
@@ -35,6 +38,7 @@ class StylistsController < ApplicationController
 
     def destroy
         @stylist = Stylist.find(params[:id])
+        authorize @stylist
         @stylist.destroy
         redirect_to stylists_path
     end
