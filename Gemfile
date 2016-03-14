@@ -12,6 +12,7 @@ gem 'pundit', '~> 1.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'pickadate-rails4', '~> 3.5', '>= 3.5.6.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 

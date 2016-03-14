@@ -29,7 +29,7 @@ class StylistsController < ApplicationController
     def update
         @stylist = find(params[:id])
         authorize @stylist
-        if @stylist.update_attributes(secure_params)
+        if @stylist.update_attributes(stylist_params)
             redirect_to stylist_path, :success => "Stylist updated"
         else
             redirect_to users_path, :alert => "Unable to update Stylist"

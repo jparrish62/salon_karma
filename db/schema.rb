@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309091613) do
+ActiveRecord::Schema.define(version: 20160311143654) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "date"
+    t.string   "time"
+    t.string   "hair_style"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "stylist_id"
+  end
+
+  add_index "appointments", ["stylist_id"], name: "index_appointments_on_stylist_id"
+  add_index "appointments", ["user_id"], name: "index_appointments_on_user_id"
 
   create_table "stylists", force: :cascade do |t|
     t.string   "name"
