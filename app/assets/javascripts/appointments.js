@@ -1,5 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-$('.datepicker').pickadate();
-$('.timepicker').pickatime()
+$(document).on('ready page:load',function(dates,timer){
+   var dates = $(".datepicker").datepicker({  });
+   var timer = $('.time').timepicker({ });
+});

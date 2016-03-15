@@ -12,9 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require pickadate/picker # required
-//= require pickadate/picker.date # for the date picker
-//= require pickadate/picker.time # for the time picker
-//= require pickadate/translations/bg_BG
-//= require turbolinks
+//= require jquery-ui
+//= require jquery.timepicker.js
+//= require appointments
 //= require_tree .
