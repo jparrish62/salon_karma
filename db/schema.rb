@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311143654) do
+ActiveRecord::Schema.define(version: 20160315195841) do
 
   create_table "appointments", force: :cascade do |t|
     t.string   "name"
@@ -19,10 +19,15 @@ ActiveRecord::Schema.define(version: 20160311143654) do
     t.string   "time"
     t.string   "hair_style"
     t.string   "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
     t.integer  "stylist_id"
+    t.string   "chemical_services"
+    t.string   "color_services"
+    t.string   "treatment_services"
+    t.string   "weaves"
+    t.string   "braid"
   end
 
   add_index "appointments", ["stylist_id"], name: "index_appointments_on_stylist_id"
